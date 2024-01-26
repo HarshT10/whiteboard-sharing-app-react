@@ -8,7 +8,7 @@ const { disconnect } = require("process");
 
 const io = new Server(server);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   res.send("this is mern");

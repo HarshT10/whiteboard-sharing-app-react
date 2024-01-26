@@ -1,0 +1,30 @@
+.row-wrapper {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.canvas-container {
+    height: 600px
+}
+
+.tool-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 0;
+    box-shadow: 0px 0px 7px 2px rgb(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 500px;
+    width: 150px !important;
+    justify-content: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.line:hover {
+    background-color: #c1c1c1;
+}

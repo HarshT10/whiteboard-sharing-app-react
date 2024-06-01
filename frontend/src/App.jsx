@@ -6,8 +6,7 @@ import io from "socket.io-client";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-const server =
-  "https://real-time-white-board-hj3katygf-harsht10s-projects.vercel.app/api/socketio";
+const server = "whiteboard-sharing-app-react-backend.vercel.app/api/socketio";
 const connectionOptions = {
   "force new connection": true,
   reconnectionAttempts: "Infinity",

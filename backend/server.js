@@ -69,5 +69,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(port, () => {
-  console.log("server is running on http://localhost:5000");
+  console.log("server is running on http://localhost:3000");
 });

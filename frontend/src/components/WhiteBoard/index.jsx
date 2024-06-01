@@ -2,7 +2,6 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import rough from "roughjs";
 import "./index.css";
 
-/* eslint-disable react/prop-types */
 
 const roughGenerator = rough.generator();
 

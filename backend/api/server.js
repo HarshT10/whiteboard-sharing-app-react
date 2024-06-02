@@ -1,8 +1,18 @@
 const express = require("express");
 const { Server } = require("socket.io");
+const cors = require("cors"); // Import the CORS middleware
 const { addUser, removeUser, getUser } = require("../utils/users");
 
 const app = express();
+
+// Use CORS middleware
+app.use(
+  cors({
+    origin: "https://your-frontend-domain.com", // Replace with your frontend URL
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
 const server = require("http").createServer(app);
 const io = new Server(server);
@@ -10,6 +20,7 @@ const io = new Server(server);
 let meetingCodeGlobal, imageURLGlobal;
 
 io.on("connection", (socket) => {
+  console.log("New client connected");
   socket.on("userJoined", (data) => {
     const { name, meetingCode, userId, host, presenter } = data;
 
@@ -61,6 +72,7 @@ io.on("connection", (socket) => {
   });
 });
 
+// Export the serverless function
 module.exports = (req, res) => {
   server.emit("request", req, res);
 };
